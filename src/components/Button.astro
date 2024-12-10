@@ -3,23 +3,25 @@ interface Props {
 	href?: string;
 	text: string;
 	desc?: string;
-	isSubmit: boolean;
+	isSubmit?: boolean;
+	isDark?: boolean;
 }
 
 const {
 	href,
 	text,
 	desc,
-	isSubmit = false
+	isSubmit = false,
+	isDark = false,
 } = Astro.props as Props;
 ---
 
 {isSubmit ?
-	<button type="submit" class="btn" aria-label={desc || 'Book a show'}>
+	<button type="submit" class:list={['btn', { btnDark: isDark }]} aria-label={desc || 'Book a show'}>
 		{text}
 	</button>
 :
-	<a href={href} class="btn" aria-label={desc || text}>
+	<a href={href} class:list={['btn', { btnDark: isDark }]} aria-label={desc || text}>
 		{text}
 	</a>
 }
