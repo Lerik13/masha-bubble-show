@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+---
+
+<nav class="relative w-full bg-purpleLight">
+	<!-- Flex container -->
+	<div class="flex items-center justify-between">
+
+		<!-- Menu Items -->
+		<ul class="hidden md:flex space-x-5 lg:space-x-10 pl-2 items-center mx-auto">
+			<li><a href="/#about" aria-label="About me" class="uppercase text-purple-800 font-semibold pb-2 border-b-2 border-purple-300 hover:border-purple-800 duration-500 ease-out transition-all">
+				About Us
+			</a></li>
+			<li><a href="/#services" aria-label="Services" class="uppercase text-purple-800 font-semibold pb-2 border-b-2 border-purple-300 hover:border-purple-800 duration-500 ease-out transition-all">
+				Services
+			</a></li>
+			<li><a href="/" aria-label="Goto main page" class="pb-2">
+				<Image src="/logo0.png" alt="Logo" width={200} height={194} />
+			</a></li>
+			<li><a href="/#faq" aria-label="Frequently asked questions" class="uppercase text-purple-800 font-semibold pb-2 border-b-2 border-purple-300 hover:border-purple-800 duration-500 ease-out transition-all">
+				FAQ
+			</a></li>
+			<li><a href="/#contacts" aria-label="How to contact with me" class="uppercase text-purple-800 font-semibold pb-2 border-b-2 border-purple-300 hover:border-purple-800 duration-500 ease-out transition-all">
+				Contact Us
+			</a></li>
+		</ul>
+
+		<!-- Hamburger Icon -->
+		<button id="menu-btn" class="block hamburger focus:outline-none md:hidden" aria-label="Open Navigation Menu">
+			<span class="hamburger-top"></span>
+			<span class="hamburger-middle"></span>
+			<span class="hamburger-bottom"></span>
+		</button>
+
+		<!-- Mobile Menu -->
+		<div id="slideover-container" class="fixed inset-0 w-full h-full invisible z-50">
+			<div id="slideover-bg"class="absolute inset-0 w-full h-full bg-white opacity-0 z-0 duration-500 ease-out transition-all"></div>
+			<ul id="slideover"class="absolute w-56 h-full flex-col items-left self-end px-10 pt-20 space-y-10 bg-purple-200 top-0 right-0 translate-x-full duration-500 ease-out transition-all">
+				<li><a href="#about" aria-label="Read about me" class="nav-link uppercase text-purple-800 font-semibold pb-2 border-b-2 border-purple-300 hover:border-purple-800">About Us</a></li>
+				<li><a href="#services" aria-label="Services" class="nav-link uppercase text-purple-800 font-semibold pb-2 border-b-2 border-purple-300 hover:border-purple-800">Services</a></li>
+				<li><a href="#faq" aria-label="Frequently asked questions" class="nav-link uppercase text-purple-800 font-semibold pb-2 border-b-2 border-purple-300 hover:border-purple-800">FAQ</a></li>
+				<li><a href="#contacts" aria-label="How to contact with me" class="nav-link uppercase text-purple-800 font-semibold pb-2 border-b-2 border-purple-300 hover:border-purple-800">Contact Us</a></li>
+				<li><a href="/" aria-label="Main page" class="nav-link">
+					<Image src="/logo0.png" alt="Logo" width={200} height={190} />
+				</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<script>
+	import "../js/nav.js"
+</script>

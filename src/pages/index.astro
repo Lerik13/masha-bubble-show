@@ -1,8 +1,63 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
 
+import MainLayout from '../layouts/MainLayout.astro';
+import Button from "../components/Button.astro";
+
+import heroImage from "../assets/hero_main.jpg";
 ---
 
-<Layout>
-	Hello
-</Layout>
+<MainLayout>
+	<!-- Hero Section -->
+	<section id="hero">
+		<!-- Flex Container -->
+		<div class="relative w-full min-h-[calc(100vh-200px)] flex items-center">
+			<div class="absolute top-0 left-0 right-0 z-0 w-full h-full">
+				<Image src={heroImage} alt="" format="avif" class="img-hero" />
+			</div>
+			<!-- Left item -->
+			<div class="z-10 container flex flex-col space-y-10 mx-auto px-2">
+				<div class="flex w-1/2">
+					<h1 class="text-4xl md:text-5xl xl:text-6xl font-hero text-white">
+						Maria's Magic<br> Bubble Show
+					</h1>
+				</div>
+				<div class="flex">
+					<p class="md:max-w-xs font-cursiv text-white text-2xl md:text-3xl">
+						Where magic begins ...
+					</p>
+				</div>
+				<div class="flex">
+					<Button href="#contacts" text="Book a show" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="description" class="w-full bg-purpleLight py-8 px-2">
+		<div class="container md:flex md:space-x-4 items-center mx-auto">
+			<div class="md:w-1/3 flex flex-col space-y-6 py-4 items-center md:items-start">
+				<p class="font-cursiv text-2xl md:text-3xl text-purpleDark">
+					Fantastic show
+				</p>
+				<h1 class="text-4xl md:text-5xl xl:text-6xl font-hero ">
+					Bubble Show
+				</h1>
+			</div>
+			<div class="md:w-2/3 flex flex-col space-y-1 text-justify">
+				<p>The magic of bubbles mesmerizes. It makes you dream and believe in miracles.</p>
+				<p>I am an original bubble show performer. My main goal is to create a fun and exciting atmosphere, surprise my audience and bring them joy.</p>
+				<p>My Magic Bubble Show will transport you to a fascinating world where thousands of bubbles of all shapes and sizes shimmer in rainbow colors.</p>
+				<p>The unforgettable Magic Show will be sure to bring 100% positive emotions and joyful memories.</p>
+				<p>This is the show where children are afraid to blink and adults hold their breath.</p>
+			</div>
+		</div>
+	</section>
+</MainLayout>
+
+<style>
+	.img-hero {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
