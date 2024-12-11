@@ -23,7 +23,12 @@ import img15 from "../assets/img_main15.jpg";
 import img16 from "../assets/img_main16.jpg";
 import img17 from "../assets/img_main17.jpg";
 import img18 from "../assets/img_main18.jpg";
-
+import show_for1 from "../assets/show_for1.jpg";
+import show_for2 from "../assets/show_for2.jpg";
+import show_for3 from "../assets/show_for3.jpg";
+import show_for4 from "../assets/show_for4.jpg";
+import show_for5 from "../assets/show_for5.jpg";
+import show_for6 from "../assets/show_for6.jpg";
 ---
 
 <MainLayout>
@@ -71,9 +76,10 @@ import img18 from "../assets/img_main18.jpg";
 			</div>
 		</div>
 	</section>
-	<section id="photo-gallery" class="">
-		<div class="container flex flex-col mx-auto py-8">
-			<h2 class="flex mx-auto py-6 md:py-8 text-2xl md:text-3xl xl:text-4xl text-purpleDark md:my-4">
+
+	<section id="photo-gallery" class="py-8 md:py-12">
+		<div class="container flex flex-col mx-auto">
+			<h2 class="flex mx-auto py-6 md:py-8 text-2xl md:text-3xl xl:text-4xl text-purpleDark">
 				We bring MAGIC to you
 			</h2>
 			<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -136,11 +142,70 @@ import img18 from "../assets/img_main18.jpg";
 				</div>
 			</div>
 			
-			<div class="flex mx-auto mt-8">
+			<div class="flex mx-auto mt-8 mb-6">
 				<button id="btn-show-more-pics" class="btn btnDark" aria-label='See more pictures'>See more</button>
 			</div>
 		</div>
 	</section>
+
+	<section id="show-for" class="bg-gradient-to-b from-purpleLight to-purpleDark py-8 md:py-12">
+		<div class="container flex flex-col mx-auto">
+			<h2 class="flex mx-auto pt-8 md:pt-12 text-2xl md:text-3xl xl:text-4xl text-purpleDark uppercase font-semibold">
+				You can order our show for:
+			</h2>
+			<div class="grid grid-cols-2 md:grid-cols-3 gap-6 py-8 md:py-12">
+				<div class="flex flex-col">
+					<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
+						<Image src={show_for1} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+					<p class="uppercase font-semibold text-lg lg:text-xl text-white py-2">
+						Birthdays
+					</p>
+				</div>
+				<div class="flex flex-col">
+					<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
+						<Image src={show_for2} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+					<p class="uppercase font-semibold text-lg lg:text-xl text-white py-2">
+						Weddings
+					</p>
+				</div>
+				<div class="flex flex-col">
+					<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
+						<Image src={show_for3} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+					<p class="uppercase font-semibold text-lg lg:text-xl text-white py-2">
+						Baby Shower
+					</p>
+				</div>
+				<div class="flex flex-col">
+					<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
+						<Image src={show_for4} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+					<p class="uppercase font-semibold text-lg lg:text-xl text-white py-2">
+						Quinceanera
+					</p>
+				</div>
+				<div class="flex flex-col">
+					<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
+						<Image src={show_for5} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+					<p class="uppercase font-semibold text-lg lg:text-xl text-white py-2">
+						Special Occasion
+					</p>
+				</div>
+				<div class="flex flex-col">
+					<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
+						<Image src={show_for6} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+					<p class="uppercase font-semibold text-lg lg:text-xl text-white py-2">
+						Stage Performance
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 </MainLayout>
 
 <style>
