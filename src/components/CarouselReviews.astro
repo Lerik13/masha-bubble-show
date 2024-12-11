@@ -1,0 +1,131 @@
+---
+import { Image } from "astro:assets";
+
+import reviews from '../data/reviewsData';
+const len = reviews.length;
+
+import Rating from "../components/Rating.astro";
+
+const images = import.meta.glob('/src/assets/reviews/*.{jpeg,jpg,png,gif}')
+---
+
+<div class="flex relative">
+	<div class="flex items-center overflow-hidden w-full h-full">
+		<div id="reviews-carousel" class="flex h-fit gap-6 transition-all duration-300 ease-out">
+			{reviews.map(review => (
+				<article class="card flex flex-col space-y-6 w-[300px] md:w-[365px] rounded-2xl border px-6 py-6">
+					<div class="flex-none flex">
+						<Rating rating={review.rating} />
+					</div>
+					<div class="grow">
+						<p class="text-justify">
+							{review.text}
+						</p>
+					</div>
+					<div class="flex-none flex space-x-3 items-center">
+						<div class="rounded-full h-[2rem] lg:h-[3rem] xl:h-[4rem] overflow-hidden">
+							<Image src={images['/src/assets'+review.image]()} alt={review.name} format="avif" class="object-cover w-full h-full" />
+						</div>
+						<a href={review.link} class="text-purpleDark underline" aria-label="Open profile of client" target="_blank">
+							<span>{review.name}</span>
+						</a>
+					</div>
+				</article>
+			))}
+		</div>
+	</div>
+
+	<button id="carousel-arrow-left" class="disabledContent arrow arrow-left" aria-label="Arrow Left">&#10140;</button>
+	<button id="carousel-arrow-right" class="arrow arrow-right" aria-label="Arrow Right">&#10140;</button>
+</div>
+
+<style>
+	.card {
+		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+		overflow: hidden;
+	}
+
+	.arrow {
+		
+		position: absolute;
+		top: calc(50% - 18px);
+		width: 40px;
+		height: 40px;
+		color: var(--purpleDark);
+		border: 1px solid var(--purpleDark);
+		border-radius: 200px;
+		font-size: 20px;
+		font-weight: bold;
+		transition: all 300ms cubic-bezier(0, 0, 0.2, 1);
+	}
+
+	.arrow-left {
+		transform: scaleX(-1);
+		left: -12px;
+		@media (width > 767px) {
+			left: -25px;
+		}
+		@media (width > 1330px) {
+			left: -60px;
+		}
+	}
+	.arrow-right {
+		right: -12px;
+		@media (width > 767px) {
+			right: -25px;
+		}
+		@media (width > 1330px) {
+			right: -60px;
+		}
+	}
+
+.disabledContent {
+	pointer-events: none;
+	color: var(--purpleLight);
+}
+</style>
+
+<script define:vars={{ len }}>
+	let slideIndex = 0;
+	let shift = 20;
+	let limit_right = len-1;
+
+	const calcShift = () => {
+		if (screen.width > 1199) {
+			shift = 25;
+		}
+		if (screen.width > 1439) {
+			limit_right = len-3;
+		}
+	}
+	calcShift();
+	window.addEventListener("resize", calcShift);
+	
+	function changeSlide(i) {
+		slideIndex = i;
+
+		document.querySelector('#carousel-arrow-left').classList.remove('disabledContent');
+		document.querySelector('#carousel-arrow-right').classList.remove('disabledContent');
+		if (slideIndex === 0) {
+			document.querySelector('#carousel-arrow-left').classList.add('disabledContent');
+		}
+		if (slideIndex === limit_right) { 
+			document.querySelector('#carousel-arrow-right').classList.add('disabledContent');
+		}
+
+		document.querySelector('#reviews-carousel').style.transform = `translate(-${shift * slideIndex}rem)`;
+	}
+
+	function moveSliderLeft() {
+		slideIndex--;
+		changeSlide(slideIndex);
+	}
+
+	function moveSliderRight() {
+		slideIndex++;
+		changeSlide(slideIndex);
+	}
+
+	document.querySelector('#carousel-arrow-left').addEventListener('click', moveSliderLeft)
+	document.querySelector('#carousel-arrow-right').addEventListener('click', moveSliderRight)
+</script>
