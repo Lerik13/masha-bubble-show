@@ -1,0 +1,51 @@
+---
+import faqData from '../data/faqData';
+---
+
+<ul class="flex flex-col gap-y-1">
+	{faqData.map(faq => (
+		<li class="border-b border-purpleDark py-4">
+			<a id=`faq-${faq.id}` href="#" aria-label="Read the answer of this question" class="faq_question text-white">
+				{faq.question}
+			</a>
+			<div class="faq_answer hidden pt-2 pl-4 duration-500 ease-in-out transition-all text-white flex flex-col gap-y-1">
+				{(faq.answer.split("\n")).map(str => (<p>{str}</p>))}
+			</div>
+		</li>
+	))}
+</ul>
+
+<style>
+	.faq_question {
+		display: flex;
+		width: 100%;
+		position: relative;
+		padding-right: 20px;
+		padding-left: 4px;
+		&::after {
+			content: "+";
+			position: absolute;
+			top: 0px;
+			right: 4px;
+			color: white;
+			font-weight: 600;
+			font-size: larger;
+		}
+	}
+
+	.faq_question--open {
+		&::after {
+			content: "-";
+		}
+	}
+</style>
+
+<script >
+	document.querySelectorAll('.faq_question').forEach((faq_question) => {
+		faq_question.addEventListener('click', (e) => {
+			e.preventDefault();
+			e.target.classList.toggle('faq_question--open');
+			e.target.nextElementSibling.classList.toggle('hidden');
+		})
+	})
+</script>
