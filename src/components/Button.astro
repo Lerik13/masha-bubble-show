@@ -1,7 +1,7 @@
 ---
 interface Props {
 	href?: string;
-	text: string;
+	text?: string;
 	desc?: string;
 	isSubmit?: boolean;
 	isDark?: boolean;
@@ -17,8 +17,8 @@ const {
 ---
 
 {isSubmit ?
-	<button type="submit" class:list={['btn', { btnDark: isDark }]} aria-label={desc || 'Book a show'}>
-		{text}
+	<button type="submit" class:list={['btn', { btnDark: isDark }]} aria-label={desc || 'submit'}>
+		{text || desc || 'SUBMIT'}
 	</button>
 :
 	<a href={href} class:list={['btn', { btnDark: isDark }]} aria-label={desc || text}>

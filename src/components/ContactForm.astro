@@ -1,0 +1,184 @@
+---
+import { Icon } from 'astro-icon/components';
+import Button from "../components/Button.astro";
+---
+
+<form name="contact" class="contact__form" id="form" method="POST" data-netlify="true">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+		<div class="flex flex-col gap-y-2">
+			<label for="event_type" class="text-white">
+				Choose your event
+			</label>
+			<div class="select-container">
+				<select name="event_type" id="event_type" class="input-form">
+					<option value="Kids Birthday">Kids Birthday</option>
+					<option value="Adult Birthday">Adult Birthday</option>
+					<option value="Wedding">Wedding</option>
+					<option value="Baby Shower">Baby Shower</option>
+					<option value="Bar/Bat mitzvah">Bar/Bat Mitzvah</option>
+					<option value="other">Other</option>
+				</select>
+				<div class="icon-container">
+					<Icon name="arrow-down" class="text-2xl" />
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col gap-y-2">
+			<label for="event_place" class="text-white">
+				Where will celebration take place
+			</label>
+			<div class="select-container">
+				<select name="event_place" id="event_place" class="input-form">
+					<option value="indoor">indoor</option>
+					<option value="outdoor">outdoor</option>
+					<option value="do not know">I don&rsquo;t know</option>
+				</select>
+				<div class="icon-container">
+					<Icon name="arrow-down" class="text-2xl" />
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col gap-y-2">
+			<label for="event_type" class="text-white">
+				What type of the show are you interested in
+			</label>
+			<div class="select-container">
+				<select name="event_type" id="event_type" class="input-form">
+					<option value="bubble show">Bubble Show</option>
+					<option value="bubble show + WOW Bear">Bubble Show + WOW Bear</option>
+					<option value="bubble show + silver paper party">Bubble Show + Silver Paper Party</option>
+					<option value="bubble show + face painting">Bubble Show + Face Painting</option>
+					<option value="bubble show + WOW Bear + face painting">Bubble Show + WOW Bear + Face Painting</option>
+				</select>
+				<div class="icon-container">
+					<Icon name="arrow-down" class="text-2xl" />
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col gap-y-2">
+			<label for="number_guests" class="text-white">
+				Approximate number of guests
+			</label>
+			<div class="select-container">
+				<select name="number_guests" id="number_guests" class="input-form">
+					<option value="up to 20">up to 20</option>
+					<option value="20-30">20-30</option>
+					<option value="30-50">30-50</option>
+					<option value="50-100">50-100</option>
+					<option value="100 +">100 +</option>
+				</select>
+				<div class="icon-container">
+					<Icon name="arrow-down" class="text-2xl" />
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col gap-y-2">
+			<label for="event_date" class="text-white">
+				What is the event date 
+			</label>
+			<div class="input-date-container">
+				<input type="date" name="event_date" id="event_date" class="input-form" />
+				<div class="icon-container">
+					<Icon name="calendar-event" class="text-2xl z-10" />
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col gap-y-2">
+			<label for="event_time" class="text-white">
+				What time would you like to start the show
+			</label>
+			<div class="input-date-container">
+				<input type="time" name="event_time" id="event_time" class="input-form" />
+				<div class="icon-container">
+					<Icon name="time-event" class="text-2xl z-10" />
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col gap-y-2">
+			<label for="event_address" class="text-white">
+				What is the exact address of your event
+			</label>
+			<input type="text" name="event_address" id="event_address" class="input-form" />
+		</div>
+		<div class="flex flex-col gap-y-2">
+			<label for="name" class="text-white label-required">
+				Name
+			</label>
+			<input type="text" name="name" id="name" class="input-form" required />
+		</div>
+		<div class="flex flex-col gap-y-2">
+			<label for="phone" class="text-white">
+				Phone number
+			</label>
+			<input type="tel" name="phone" id="phone" class="input-form" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+		</div>
+		<div class="flex flex-col gap-y-2">
+			<label for="email" class="text-white label-required">
+				Email address
+			</label>
+			<input type="email" name="email" id="email" class="input-form" required />
+		</div>
+
+		<div class="flex flex-col gap-y-2 md:col-span-2">
+			<label for="add_info" class="text-white">
+				Enter additional request
+			</label>
+			<textarea name="add_info" id="add_info" class="input-form textarea-form" rows="5"></textarea>
+		</div>
+	</div>
+
+	<div class="flex mx-auto mt-8 mb-6 justify-center">
+		<Button isSubmit={true} isDark={true} />
+	</div>
+
+</form>
+
+<style>
+	.label-required {
+		&::after {
+			content: "*";
+			color:#7F1D1D;
+		}
+	}
+	.input-form {
+		color: white;
+		background-color: var(--purpleDark);
+		border: 2px solid var(--purpleLight);
+		border-radius: 50px;
+		font-size: medium;
+		padding: 10px 20px;
+		width: 100%;
+	}
+	.select-container, .input-date-container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+	}
+	.select-container select {
+		appearance: none;
+	}
+	.icon-container {
+		pointer-events: none;
+		width: 60px;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.input-date-container .icon-container::before  {
+		content: "";
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		width: 25px;
+		height: 25px;
+		background-color: var(--purpleDark);
+		z-index: 1;
+	}
+
+	.textarea-form {
+		border-radius: 30px;
+	}
+</style>
