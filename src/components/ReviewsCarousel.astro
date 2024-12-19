@@ -23,7 +23,7 @@ const images = import.meta.glob('/src/assets/reviews/*.{jpeg,jpg,png,gif}')
 						</p>
 					</div>
 					<div class="flex-none flex space-x-3 items-center">
-						<div class="rounded-full h-[2rem] lg:h-[3rem] xl:h-[4rem] overflow-hidden">
+						<div class="rounded-full h-[2rem] lg:h-[3rem] xl:h-[4rem] w-[2rem] lg:w-[3rem] xl:w-[4rem] overflow-hidden">
 							<Image src={images['/src/assets'+review.image]()} alt={review.name} format="avif" class="object-cover w-full h-full" />
 						</div>
 						<a href={review.link} class="text-purpleDark underline" aria-label="Open profile of client" target="_blank">
