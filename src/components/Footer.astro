@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from 'astro-icon/components';
+import contacts from '../data/contactData';
+---
+
+<footer class="bg-purpleLight py-4">
+	<div class="container flex flex-col mx-auto space-y-6">
+		<div class="flex mx-auto">
+			<div class="flex space-x-10">
+				<a href={contacts.facebook} data-title="Facebook">
+					<Icon name="facebook" class="text-4xl" />
+				</a>
+				<a href={contacts.instagram} data-title="Instagram">
+					<Icon name="instagram" class="text-4xl" />
+				</a>
+				<a href=`tel:{contacts.phoneValue}` data-title="Phone" >
+					<Icon name="phone" class="text-4xl" />
+				</a>
+			</div>
+		</div>
+
+		<ul class="flex space-x-5 lg:space-x-10 items-center mx-auto">
+			<li><a href="/#about" aria-label="About me" class="uppercase text-purple-800 font-semibold pb-2 border-b-2 border-purple-300 hover:border-purple-800 transition-all duration-500 ease-out">
+				About Us
+			</a></li>
+			<li><a href="/#services" aria-label="Services" class="uppercase text-purple-800 font-semibold pb-2 border-b-2 border-purple-300 hover:border-purple-800 transition-all duration-500 ease-out">
+				Services
+			</a></li>
+			<li class="hidden md:flex"><a href="/" aria-label="Goto main page" class="pb-2">
+				<Image src="/logo0.png" alt="Logo" width={200} height={194} />
+			</a></li>
+			<li><a href="/#faq" aria-label="Frequently asked questions" class="uppercase text-purple-800 font-semibold pb-2 border-b-2 border-purple-300 hover:border-purple-800 transition-all duration-500 ease-out">
+				FAQ
+			</a></li>
+			<li><a href="/#contacts" aria-label="How to contact with me" class="uppercase text-purple-800 font-semibold pb-2 border-b-2 border-purple-300 hover:border-purple-800 transition-all duration-500 ease-out">
+				Contact Us
+			</a></li>
+		</ul>
+
+		<div class="border-t border-purpleDark border-dotted flex justify-between w-full px-2 items-center py-6 ">
+			<div>
+				&copy; All Rights Reserved
+			</div>
+			<div class="flex items-center space-x-2 justify-end">
+				<span class="text-right">website developed by</span>
+				<a href={contacts.developer} data-title="Web developer" target="_blank">
+					<Icon name="logo-developer" class="text-4xl" />
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
