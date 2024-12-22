@@ -1,0 +1,321 @@
+---
+import { Image } from "astro:assets";
+
+import MainLayout from '../layouts/MainLayout.astro';
+
+import imgSilver from "../assets/services/silver.jpg";
+import imgGold from "../assets/services/gold.jpg";
+import imgSummerCampSpecial from "../assets/services/summer-camp-special.jpg";
+import imgSummerCamp from "../assets/services/summer-camp.jpg";
+import imgSilverPaperParty from "../assets/services/silver-paper.jpeg";
+---
+
+<MainLayout>
+	<div class="container flex mx-auto px-2 items-center">
+		<h1 class="w-full text-4xl md:text-5xl xl:text-6xl font-hero py-6 md:py-10 text-center">
+			Services
+		</h1>
+	</div>
+
+	<section id="silver">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-10">
+			<div class="container flex flex-col-reverse md:flex-row mx-auto px-2 ">
+				<div class="md:w-1/2 md:pr-4 flex flex-col space-y-3">
+					<h2 class="text-3xl md:text-4xl xl:text-5xl font-hero py-6 md:py-6 text-center md:text-left">
+						SILVER
+					</h2>
+					<div class="my-6">
+						Indoor only<br/>
+						Up to 15 kids<br/>
+						$450<br/>
+						45-60 minutes
+					</div>
+					<ul class="list-none">
+						<li>HANDMADE BUBBLES</li>
+						<li>WHITE FOG BUBBLES</li>
+						<li>TRICKS WITH BUBBLES: volcano, caterpillar, aquarium</li>
+						<li>HUGE BUBBLES</li>
+						<li>BUBBLE CAKE</li>
+						<li>INTERACTIVE WITH BIRTHDAY PERSON</li>
+						<li>BUBBLE FOAM FOR KIDS HANDS</li>
+						<li>INSIDE BIG BUBBLE (up to 15kids)</li>
+						<li>PROFESSIONAL LIGHTS AND MUSIC</li>
+					</ul>
+					<div>
+						+ ADD MAGIC LIGHT RAINBOW TABLE +$40<br/>
+						+ ADD WOW BEAR +$190
+					</div>
+					<p>Travel fee may apply</p> 
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgSilver} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="gold">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-10">
+			<div class="container flex flex-col-reverse md:flex-row mx-auto px-2">
+				<div class="md:w-1/2 md:pr-4 flex flex-col space-y-3">
+					<h2 class="text-3xl md:text-4xl xl:text-5xl font-hero py-6 md:py-10 text-center md:text-left">
+						GOLD
+					</h2>
+					<div class="my-6">
+						Indoor only<br/>
+						Up to 30 kids<br/>
+						$499<br/>
+						60 minutes
+					</div>
+					<ul class="list-none">
+						<li>HANDMADE BUBBLES</li>
+						<li>WHITE FOG BUBBLES</li>
+						<li>TRICKS WITH BUBBLES: volcano, caterpillar, aquarium</li>
+						<li>HUGE BUBBLES</li>
+						<li>BUBBLE CAKE</li>
+						<li>INTERACTIVE WITH BIRTHDAY PERSON</li>
+						<li>BUBBLE FOAM FOR KIDS HANDS</li>
+						<li>INSIDE BIG BUBBLE (up to 15kids)</li>
+						<li>PROFESSIONAL LIGHTS AND MUSIC</li>
+						<li>MAGIC LIGHT RAINBOW TABLE</li>
+					</ul>
+					<div>
+						+ ADD WOW BEAR +$190
+					</div>
+					<p>Travel fee may apply</p> 
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgGold} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="summer-camp">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-10">
+			<div class="container flex flex-col-reverse md:flex-row mx-auto px-2">
+				<div class="md:w-1/2 md:pr-4 flex flex-col space-y-3">
+					<h2 class="text-3xl md:text-4xl xl:text-5xl font-hero py-6 md:py-10 text-center md:text-left">
+						BUBBLE ADVENTURE SUMMER CAMP SPECIAL
+					</h2>
+					<div class="my-6">
+						Indoor only<br/>
+						Up to 30 kids<br/>
+						$460<br/>
+						45 minutes
+					</div>
+					<ul class="list-none">
+						<li>Everyone will enjoy a fascinating performance </li>
+						<li>HANDMADE BUBBLES</li>
+						<li>WHITE FOG BUBBLES</li>
+						<li>TRICKS WITH BUBBLES: caterpillar, volcano, carousel</li>
+						<li>HUGE BUBBLES</li>
+						<li>MAGIC LIGHT RAINBOW TABLE</li>
+						<li>BUBBLE FOAM FOR K'DS HANDS </li>
+					</ul>
+					<div>
+						+ ADD WOW BEAR +$190
+					</div>
+					<p>Travel fee may apply</p> 
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgSummerCampSpecial} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="summer-camp-more">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-10">
+			<div class="container flex flex-col-reverse md:flex-row mx-auto px-2">
+				<div class="md:w-1/2 md:pr-4 flex flex-col space-y-3">
+					<h2 class="text-3xl md:text-4xl xl:text-5xl font-hero py-6 md:py-10 text-center md:text-left">
+						SUMMER CAMP
+					</h2>
+					<div class="my-6">
+						Indoor only<br/>
+						Up to 80 kids<br/>
+						from $590<br/>
+						1 hour<br/>
+						Plus travel fee
+					</div>
+					<ul class="list-none">
+						<li>SPECIAL PROGRAM FOR SUMMER CAMPS!</li>
+						<li>INCLUDES EVERYTHING FOR KIDS FUN!</li>
+					</ul>
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgSummerCamp} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="silver-paper-party-bear">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-10">
+			<div class="container flex flex-col-reverse md:flex-row mx-auto px-2">
+				<div class="md:w-1/2 md:pr-4 flex flex-col space-y-3">
+					<h2 class="text-3xl md:text-4xl xl:text-5xl font-hero py-6 md:py-10 text-center md:text-left">
+						SILVER PAPER PARTY + WOW BEAR 
+					</h2>
+					<div class="my-6">
+						Indoor only<br/>
+						$490<br/>
+						50 minutes<br/>
+						Travel fee may apply
+					</div>
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgSilverPaperParty} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="bubble-fun-silver">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-10">
+			<div class="container flex flex-col-reverse md:flex-row mx-auto px-2">
+				<div class="md:w-1/2 md:pr-4 flex flex-col space-y-3">
+					<h2 class="text-3xl md:text-4xl xl:text-5xl font-hero py-6 md:py-10 text-center md:text-left">
+						BUBBLE FUN (SILVER)
+					</h2>
+					<div class="my-6">
+						Outdoor only<br/>
+						Up to 15 kids<br/>
+						45 minutes<br/>
+						$380
+					</div>
+					<p>This program is a great outdoor entertainment, 45 minutes of fun and laughter.</p>
+					<ul class="list-none">
+						<li>BUBBLES OF DIFFERENT SHAPES AND SIZES</li>
+						<li>BUBBLE STORM</li>
+						<li>SMOKE BUBBLES</li>
+						<li>BUBBLE CAKE FOR BIRTHDAY PERSON</li>
+						<li>BUBBLE FOAM FOR EACH KID BUBBLE</li>
+						<li>HAIRSTYLES FOR KIDS (crown or a fashionable mohawk)</li>
+						<li>INTERACTIVE WITH A BIRTHDAY PERSON </li>
+					</ul>
+					<p>The program includes "soap bubble magic" mini workshop</p>
+					<p>Travel fee may apply</p> 
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgSilver} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="bubble-fun-gold">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-10">
+			<div class="container flex flex-col-reverse md:flex-row mx-auto px-2 items-center">
+				<div class="md:w-1/2 md:pr-4 flex flex-col space-y-3">
+					<h2 class="text-3xl md:text-4xl xl:text-5xl font-hero py-6 md:py-10 text-center md:text-left">
+						WOW BUBBLE PARTY (GOLD)
+					</h2>
+					<div class="my-6">
+						Outdoor<br/>
+						Up to 25 kids<br/>
+						60 minutes<br/>
+						$399
+					</div>
+					<p>This program is a great outdoor entertainment, 45 minutes of fun and laughter.</p>
+					<ul class="list-none">
+						<li>KIDS WILL SEE A VARIETY OF DIFFERENT BUBBLE SHAPES AND SIZES </li>
+						<li>BUBBLE STORM</li>
+						<li>SMOKE BUBBLES</li>
+						<li>BUBBLE CAKE FOR BIRTHDAY PERSON</li>
+						<li>KIDS WILL GET BUBBLE ICE CREAMS AND NUMEROUS SURPRISES </li>
+						<li>BUBBLE HAIRSTYLES FOR KIDS</li>
+						<li>INTERACTIVE WITH A BIRTHDAY PERSON </li>
+						<li>MINI BUBBLE MAGIC WORKSHOP </li>
+					</ul>
+					<p>Travel fee may apply</p> 
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgSilver} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="bubble-play-camp-silver">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-10">
+			<div class="container flex flex-col-reverse md:flex-row mx-auto px-2">
+				<div class="md:w-1/2 md:pr-4 flex flex-col space-y-3">
+					<h2 class="text-3xl md:text-4xl xl:text-5xl font-hero py-6 md:py-10 text-center md:text-left">
+						BUBBLE PLAY SUMMER CAMP (SILVER) 
+					</h2>
+					<div class="my-6">
+						Outdoor only<br/>
+						Up to 15 kids<br/>
+						45 minutes<br/>
+						$360
+					</div>
+					<p>This program is a great outdoor entertainment</p>
+					<ul class="list-none">
+						<li>KIDS WILL SEE A VARIETY OF DIFFERENT BUBBLE SHAPES AND SIZES </li>
+						<li>WHITE FOG BUBBLES</li>
+						<li>BUBBLE STORM</li>
+						<li>HUGE BUBBLES</li>
+						<li>BUBBLE FOAM FOR KIDS HANDS</li>
+						<li>MINI BUBBLE WORKSHOP (kids will use different bubble wands to create their own magic)</li>
+					</ul>
+					<p>Travel fee may apply</p> 
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgSilver} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="bubble-play-camp-gold">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-10">
+			<div class="container flex flex-col-reverse md:flex-row mx-auto px-2">
+				<div class="md:w-1/2 md:pr-4 flex flex-col space-y-3">
+					<h2 class="text-3xl md:text-4xl xl:text-5xl font-hero py-6 md:py-10 text-center md:text-left">
+						BUBBLE PLAY SUMMER CAMP (GOLD) 
+					</h2>
+					<div class="my-6">
+						Outdoor only<br/>
+						Up to 25 kids<br/>
+						1 hour<br/>
+						$380
+					</div>
+					<p>This program is a great outdoor entertainment</p>
+					<ul class="list-none">
+						<li>KIDS WILL SEE A VARIETY OF DIFFERENT BUBBLE SHAPES AND SIZES </li>
+						<li>WHITE FOG BUBBLES</li>
+						<li>BUBBLE STORM</li>
+						<li>HUGE BUBBLES</li>
+						<li>BUBBLE FOAM FOR KIDS HANDS</li>
+					</ul>
+					<p>Travel fee may apply</p> 
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgSilver} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+</MainLayout>
