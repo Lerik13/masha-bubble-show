@@ -2,6 +2,8 @@
 import Nav from '../components/Nav.astro';
 import Footer from "../components/Footer.astro";
 import '../styles/global.css';
+import FaqList from '../components/FaqList.astro';
+import ContactForm from '../components/ContactForm.astro';
 
 interface Props {
 	title?: string;
@@ -32,6 +34,28 @@ const {
 		<Nav />
 		<main>
 			<slot />
+
+			<div class="flex h-[100px] w-full bg-gradient-to-b from-white to-purple-300"></div>
+
+			<section id="faq" class="bg-gradient-to-b from-purple-300 to-purpleDark pb-8 md:pb-12">
+				<div class="container flex flex-col mx-auto px-10">
+					<h2 class="flex mx-auto py-8 md:py-12 text-2xl md:text-3xl xl:text-4xl text-white uppercase font-semibold">
+						FAQ
+					</h2>
+					<FaqList />
+				</div>
+			</section>
+		
+			<section id="contacts" class="bg-gradient-to-b from-purpleDark to-purple-500">
+				<div class="container flex flex-col mx-auto px-10">
+					<h2 class="flex mx-auto py-8 md:py-12 text-2xl md:text-3xl xl:text-4xl text-white uppercase font-semibold">
+						Contact Us
+					</h2>
+					<ContactForm />
+				</div>
+			</section>
+		
+			<div class="flex h-[100px] w-full bg-gradient-to-b from-purple-500 to-purpleLight"></div>
 		</main>
 		<Footer />
 	</body>
