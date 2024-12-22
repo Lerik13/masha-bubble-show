@@ -22,7 +22,7 @@ const reviewsData = [
 	},
 	{
 		"image": "/reviews/4.jpg",
-		"text": `First I saw Maria's bubble show at friends birthday party. Kids were amazed, actually adults too. There are so many ways what "magic" Maria can do with bubbles.<br> And the most important our daughter stayed happy and satisfied. Thank you, Maria. You are doing great show!`,
+		"text": `First I saw Maria's bubble show at friends birthday party. Kids were amazed, actually adults too. There are so many ways what "magic" Maria can do with bubbles. And the most important our daughter stayed happy and satisfied. Thank you, Maria. You are doing great show!`,
 		"name": "Vera Tikhonova ",
 		"link": "https://www.facebook.com/vera.tikhonova.7",
 		"rating": 5,

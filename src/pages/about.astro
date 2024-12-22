@@ -1,0 +1,178 @@
+---
+import { Image } from "astro:assets";
+
+import MainLayout from '../layouts/MainLayout.astro';
+
+import heroImage from "../assets/about/hero.jpg";
+import hero1 from "../assets/about/hero1.jpg";
+import hero2 from "../assets/about/hero2.jpg";
+import hero3 from "../assets/about/hero3.jpg";
+import hero4 from "../assets/about/hero4.jpg";
+import hero5 from "../assets/about/hero5.jpg";
+import hero6 from "../assets/about/hero6.jpg";
+import imgBubbles from "../assets/about/bubbles.jpg";
+import imgIndoor from "../assets/about/indoor.jpg";
+import imgOutdoor from "../assets/about/outdoor.jpg";
+import imgBear from "../assets/about/bear.jpg";
+import imgSilver from "../assets/about/silver.jpeg";
+---
+<MainLayout>
+	<section id="hero">
+		<div class="flex items-center w-full min-h-[calc(100vh-200px)] my-4">
+			<div class="container flex flex-col-reverse md:flex-row mx-auto px-2 items-center">
+				<div class="md:w-1/2">
+					<h1 class="text-4xl md:text-5xl xl:text-6xl font-hero py-6 md:py-10 text-center md:text-left">
+						About Me
+					</h1>
+					<div class="flex flex-col space-y-2">
+						<p>My name is Maria and I am the mother of three kids. I have always love to organizing birthday parties with games and various activities.</p>
+						<p>One day I saw a bubble show at a wedding and was mesmerized by how magical and beautiful bubbles could be. Inspired, I decided to try it myself and became a bubble artist. I am truly passionate about it and love what I do.</p>
+						<p>I would love to bring fun, joy and wonderful memories to your special events. Maria's Magic Bubble Show will create unforgettable moments filled with enchantment and delight.</p>
+						</p>
+					</div>
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 flex mx-auto justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={heroImage} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="gallery">
+		<div class="container flex w-full justify-center mx-auto space-x-2 md:space-x-3 mt-6">
+			<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
+				<Image src={hero1} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+			</div>
+			<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
+				<Image src={hero3} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+			</div>
+			<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
+				<Image src={hero2} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+			</div>
+			<div class="hidden md:flex h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
+				<Image src={hero4} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+			</div>
+			<div class="hidden md:flex h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
+				<Image src={hero5} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+			</div>
+			<div class="hidden md:flex h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
+				<Image src={hero6} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+			</div>
+		</div>
+	</section>
+
+	<section id="bubbles">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-6">
+			<div class="container flex flex-col-reverse md:flex-row mx-auto px-2 items-center">
+				<div class="md:w-1/2">
+					<h1 class="text-4xl md:text-5xl xl:text-6xl font-hero py-6 md:py-10 text-center md:text-left">
+						Bubbles
+					</h1>
+					<div class="flex flex-col space-y-2">
+						<p>The magic of bubbles mesmerizes. It makes you dream and believe in miracles.</p>
+						<p>I am an original bubble show performer. My main goal is to create a fun and exciting atmosphere, surprise my audience and bring them joy.</p>
+						<p>My Magic Bubble Show will transport you to a fascinating world where thousands of bubbles of all shapes and sizes shimmer in rainbow colors.</p>
+						<p>The unforgettable Magic Show will be sure to bring 100% positive emotions and joyful memories.</p>
+						<p>This is the show where children are afraid to blink and adults hold their breath.</p>
+					</div>
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgBubbles} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="indoor">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-6">
+			<div class="container flex flex-col-reverse md:flex-row-reverse mx-auto px-2 items-center">
+				<div class="md:w-1/2">
+					<h1 class="text-4xl md:text-5xl xl:text-6xl font-hero py-6 md:py-10 text-center md:text-left">
+						Indoor Bubble Show
+					</h1>
+					<div class="flex flex-col space-y-2">
+						<p>Your child will experience a mesmerizing performance with soap bubbles. During the program, all the children will not only get to watch but also participate in the fun. The performance includes a variety of dazzling bubble tricks featuring smoke and fire. At the end of the celebration, each child will have the chance to step inside a gigantic bubble and make a wish. They will dance, and take unforgettable photos. Your child will be the star of the show, surrounded by wonder and joy.</p>
+					</div>
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgIndoor} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="outdoor">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-6">
+			<div class="container flex flex-col-reverse md:flex-row mx-auto px-2 items-center">
+				<div class="md:w-1/2">
+					<h1 class="text-4xl md:text-5xl xl:text-6xl font-hero py-6 md:py-10 text-center md:text-left">
+						Outdoor Bubble Show
+					</h1>
+					<div class="flex flex-col space-y-2">
+						<p>Experience the magic of bubbles like never before! Our highly interactive Outdoor Bubble Show will captivate your children with bubbles of all sizes, from the tiniest to the largest, including smoky and foamy bubbles. Delight in a rain of millions of bubbles and be amazed by the spectacular bubble storm. Surprises await at every turn! For the birthday child, we have something extra special-a magnificent bubble cake. As a grand finale, all the kids will get to join in the fun, using special bubble wands to create their own bubble masterpieces. Join us for an unforgettable, bubbly adventure!</p>
+					</div>
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgOutdoor} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="wow-bear">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-6">
+			<div class="container flex flex-col-reverse md:flex-row-reverse mx-auto px-2 items-center">
+				<div class="md:w-1/2">
+					<h1 class="text-4xl md:text-5xl xl:text-6xl font-hero py-6 md:py-10 text-center md:text-left">
+						WOW Bear
+					</h1>
+					<div class="flex flex-col space-y-2">
+						<p>Wow Bear is a delightful surprise. Bear arrives with music, hugging the birthday person and all the guests, bringing a gift to a birthday person, dancing with everyone and posing for pictures.</p>
+						<p>Wow Bear brings joy, a lot of bright emotions and creates a wonderful atmosphere.</p>
+						<p>FUN, FUN,FUN!</p>
+					</div>
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgBear} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="silver-show">
+		<div class="w-full min-h-[calc(100vh-200px)] flex items-center my-6">
+			<div class="container flex flex-col-reverse md:flex-row mx-auto px-2 items-center">
+				<div class="md:w-1/2">
+					<h1 class="text-4xl md:text-5xl xl:text-6xl font-hero py-6 md:py-10 text-center md:text-left">
+						Silver Show
+					</h1>
+					<div class="flex flex-col space-y-2">
+						<p>SILVER SHOW for your PARTY!!!</p>
+						<p>Love glitz, glamour, and a lively celebration?</p>
+						<p>The light silver paper of our SILVER show shines and shimmers under the spotlight, thrilling and enlivening everyone.</p>
+						<p>Thousands of sparkling streamers will turn your event into a fairy tale, while our professional kid entertainer keeps the mood high with a captivating program.</p>
+						<p>Incredible fireworks, energizing dances, and a dive into a sea of silver confetti - this show will delight everyone, making adults forget their age.</p>
+						<p>The foil show has numerous benefits and can be easily adapted to fit any party theme. But the best part is your kids won't be mere spectators, they will become key participants in a glittering fantasy.</p>
+						<p>Birthdays, Graduations, New Year's each celebration will guarantee a lot of bright emotions and a ton of smiles.</p>
+					</div>
+				</div>
+				<div class="md:w-1/2 overflow-hidden space-y-6 mx-auto flex justify-center">
+					<div class="h-[calc(50vh)] md:h-[calc(100vh-200px)] overflow-hidden space-y-6">
+						<Image src={imgSilver} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</MainLayout>
