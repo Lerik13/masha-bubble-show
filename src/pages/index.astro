@@ -1,53 +1,53 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets'
 
-import MainLayout from '../layouts/MainLayout.astro';
-import Button from "../components/Button.astro";
-import ReviewsCarousel from "../components/ReviewsCarousel.astro";
+import MainLayout from '../layouts/MainLayout.astro'
+import Button from '../components/Button.astro'
+import ReviewsCarousel from '../components/ReviewsCarousel.astro'
 
-import heroImage from "../assets/hero_main.jpg";
-import img1 from "../assets/img_main1.jpg";
-import img2 from "../assets/img_main2.jpg";
-import img3 from "../assets/img_main3.jpg";
-import img4 from "../assets/img_main4.jpg";
-import img5 from "../assets/img_main5.jpg";
-import img6 from "../assets/img_main6.jpg";
-import img7 from "../assets/img_main7.jpg";
-import img8 from "../assets/img_main8.jpg";
-import img9 from "../assets/img_main9.jpg";
-import img10 from "../assets/img_main10.jpg";
-import img11 from "../assets/img_main11.jpg";
-import img12 from "../assets/img_main12.jpg";
-import img13 from "../assets/img_main13.jpg";
-import img14 from "../assets/img_main14.jpg";
-import img15 from "../assets/img_main15.jpg";
-import img16 from "../assets/img_main16.jpg";
-import img17 from "../assets/img_main17.jpg";
-import img18 from "../assets/img_main18.jpg";
-import show_for1 from "../assets/show_for1.jpg";
-import show_for2 from "../assets/show_for2.jpg";
-import show_for3 from "../assets/show_for3.jpg";
-import show_for4 from "../assets/show_for4.jpg";
-import show_for5 from "../assets/show_for5.jpg";
-import show_for6 from "../assets/show_for6.jpg";
+import heroImage from '../assets/hero_main.jpg'
+import img1 from '../assets/img_main1.jpg'
+import img2 from '../assets/img_main2.jpg'
+import img3 from '../assets/img_main3.jpg'
+import img4 from '../assets/img_main4.jpg'
+import img5 from '../assets/img_main5.jpg'
+import img6 from '../assets/img_main6.jpg'
+import img7 from '../assets/img_main7.jpg'
+import img8 from '../assets/img_main8.jpg'
+import img9 from '../assets/img_main9.jpg'
+import img10 from '../assets/img_main10.jpg'
+import img11 from '../assets/img_main11.jpg'
+import img12 from '../assets/img_main12.jpg'
+import img13 from '../assets/img_main13.jpg'
+import img14 from '../assets/img_main14.jpg'
+import img15 from '../assets/img_main15.jpg'
+import img16 from '../assets/img_main16.jpg'
+import img17 from '../assets/img_main17.jpg'
+import img18 from '../assets/img_main18.jpg'
+import show_for1 from '../assets/show_for1.jpg'
+import show_for2 from '../assets/show_for2.jpg'
+import show_for3 from '../assets/show_for3.jpg'
+import show_for4 from '../assets/show_for4.jpg'
+import show_for5 from '../assets/show_for5.jpg'
+import show_for6 from '../assets/show_for6.jpg'
 ---
 
 <MainLayout>
 	<!-- Hero Section -->
 	<section id="hero">
-		<div class="relative w-full min-h-[calc(100vh-200px)] flex items-center">
-			<div class="absolute top-0 left-0 right-0 z-0 w-full h-full">
-				<Image src={heroImage} alt="" format="avif" class="object-cover w-full h-full" />
+		<div class="relative flex min-h-[calc(100vh-200px)] w-full items-center">
+			<div class="absolute top-0 right-0 left-0 z-0 h-full w-full">
+				<Image src={heroImage} alt="" format="avif" class="h-full w-full object-cover" />
 			</div>
 			<!-- Left item -->
-			<div class="z-10 container flex flex-col space-y-10 mx-auto px-2">
+			<div class="z-10 container mx-auto flex flex-col space-y-10 px-2">
 				<div class="flex w-1/2">
-					<h1 class="text-4xl md:text-5xl xl:text-6xl font-hero text-white">
-						Maria's Magic<br> Bubble Show
+					<h1 class="font-hero text-4xl text-white md:text-5xl xl:text-6xl">
+						Maria's Magic<br /> Bubble Show
 					</h1>
 				</div>
 				<div class="flex">
-					<p class="md:max-w-xs font-cursiv text-white text-2xl md:text-3xl">
+					<p class="font-cursiv text-2xl text-white md:max-w-xs md:text-3xl">
 						Where magic begins ...
 					</p>
 				</div>
@@ -57,148 +57,182 @@ import show_for6 from "../assets/show_for6.jpg";
 			</div>
 		</div>
 	</section>
-	<section id="description" class="w-full bg-purpleLight py-8 px-2">
-		<div class="container md:flex md:space-x-4 items-center mx-auto">
-			<div class="md:w-1/3 flex flex-col space-y-6 py-4 items-center md:items-start">
-				<p class="font-cursiv text-2xl md:text-3xl text-purpleDark">
-					Fantastic show
-				</p>
-				<h1 class="text-4xl md:text-5xl xl:text-6xl font-hero">
-					Bubble Show
-				</h1>
+	<section id="description" class="bg-purple-light w-full px-2 py-8">
+		<div class="container mx-auto items-center md:flex md:space-x-4">
+			<div class="flex flex-col items-center space-y-6 py-4 md:w-1/3 md:items-start">
+				<p class="font-cursiv text-purple-dark text-2xl md:text-3xl">Fantastic show</p>
+				<h1 class="font-hero text-4xl md:text-5xl xl:text-6xl">Bubble Show</h1>
 			</div>
-			<div class="md:w-2/3 flex flex-col space-y-1 text-justify">
+			<div class="flex flex-col space-y-1 text-justify md:w-2/3">
 				<p>The magic of bubbles mesmerizes. It makes you dream and believe in miracles.</p>
-				<p>I am an original bubble show performer. My main goal is to create a fun and exciting atmosphere, surprise my audience and bring them joy.</p>
-				<p>My Magic Bubble Show will transport you to a fascinating world where thousands of bubbles of all shapes and sizes shimmer in rainbow colors.</p>
-				<p>The unforgettable Magic Show will be sure to bring 100% positive emotions and joyful memories.</p>
+				<p>
+					I am an original bubble show performer. My main goal is to create a fun and exciting
+					atmosphere, surprise my audience and bring them joy.
+				</p>
+				<p>
+					My Magic Bubble Show will transport you to a fascinating world where thousands of bubbles
+					of all shapes and sizes shimmer in rainbow colors.
+				</p>
+				<p>
+					The unforgettable Magic Show will be sure to bring 100% positive emotions and joyful
+					memories.
+				</p>
 				<p>This is the show where children are afraid to blink and adults hold their breath.</p>
 			</div>
 		</div>
 	</section>
 
 	<section id="photo-gallery" class="py-8 md:py-12">
-		<div class="container flex flex-col mx-auto">
-			<h2 class="flex mx-auto py-6 md:py-8 text-2xl md:text-3xl xl:text-4xl text-purpleDark">
+		<div class="container mx-auto flex flex-col">
+			<h2 class="text-purple-dark mx-auto flex py-6 text-2xl md:py-8 md:text-3xl xl:text-4xl">
 				We bring MAGIC to you
 			</h2>
-			<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img1} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+			<div class="grid grid-cols-2 gap-6 md:grid-cols-3">
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img1} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img2} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img2} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img3} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img3} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img4} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img4} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img5} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img5} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img6} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img6} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img7} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img7} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img8} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img8} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 				</div>
-				<div class="hidden md:flex h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img9} alt="photo sample" format="avif" class="object-cover w-full h-full" />
-				</div>
-			</div>
-			
-			<div id="container-photo-more" class="hidden grid grid-cols-2 md:grid-cols-3 gap-6 mt-6">
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img10} alt="photo sample" format="avif" class="object-cover w-full h-full" />
-				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img11} alt="photo sample" format="avif" class="object-cover w-full h-full" />
-				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img12} alt="photo sample" format="avif" class="object-cover w-full h-full" />
-				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img13} alt="photo sample" format="avif" class="object-cover w-full h-full" />
-				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img14} alt="photo sample" format="avif" class="object-cover w-full h-full" />
-				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img15} alt="photo sample" format="avif" class="object-cover w-full h-full" />
-				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img16} alt="photo sample" format="avif" class="object-cover w-full h-full" />
-				</div>
-				<div class="h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img17} alt="photo sample" format="avif" class="object-cover w-full h-full" />
-				</div>
-				<div class="col-span-2 md:col-span-1 h-[12rem] lg:h-[18rem] xl:h-[26rem] overflow-hidden">
-					<Image src={img18} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+				<div class="hidden h-[12rem] overflow-hidden md:flex lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img9} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 				</div>
 			</div>
-			
-			<div class="flex mx-auto mt-8 mb-6">
-				<button id="btn-show-more-pics" class="btn btnDark" aria-label='See more pictures'>See more</button>
+
+			<div id="container-photo-more" class="mt-6 grid hidden grid-cols-2 gap-6 md:grid-cols-3">
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img10} alt="photo sample" format="avif" class="h-full w-full object-cover" />
+				</div>
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img11} alt="photo sample" format="avif" class="h-full w-full object-cover" />
+				</div>
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img12} alt="photo sample" format="avif" class="h-full w-full object-cover" />
+				</div>
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img13} alt="photo sample" format="avif" class="h-full w-full object-cover" />
+				</div>
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img14} alt="photo sample" format="avif" class="h-full w-full object-cover" />
+				</div>
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img15} alt="photo sample" format="avif" class="h-full w-full object-cover" />
+				</div>
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img16} alt="photo sample" format="avif" class="h-full w-full object-cover" />
+				</div>
+				<div class="h-[12rem] overflow-hidden lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img17} alt="photo sample" format="avif" class="h-full w-full object-cover" />
+				</div>
+				<div class="col-span-2 h-[12rem] overflow-hidden md:col-span-1 lg:h-[18rem] xl:h-[26rem]">
+					<Image src={img18} alt="photo sample" format="avif" class="h-full w-full object-cover" />
+				</div>
+			</div>
+
+			<div class="mx-auto mt-8 mb-6 flex">
+				<button id="btn-show-more-pics" class="btn btnDark" aria-label="See more pictures"
+					>See more</button
+				>
 			</div>
 		</div>
 	</section>
 
-	<section id="show-for" class="bg-gradient-to-b from-purpleLight to-purpleDark py-8 md:py-12">
-		<div class="container flex flex-col mx-auto">
-			<h2 class="flex mx-auto pt-8 md:pt-12 text-2xl md:text-3xl xl:text-4xl text-purpleDark uppercase font-semibold items-center text-center">
+	<section
+		id="show-for"
+		class="bg-linear-to-b from-[var(--purple-light)] to-[var(--purple-dark)] py-8 md:py-12"
+	>
+		<div class="container mx-auto flex flex-col">
+			<h2
+				class="text-purple-dark mx-auto flex items-center pt-8 text-center text-2xl font-semibold uppercase md:pt-12 md:text-3xl xl:text-4xl"
+			>
 				You can order our show for:
 			</h2>
-			<div class="grid grid-cols-2 md:grid-cols-3 gap-6 py-8 md:py-12">
+			<div class="grid grid-cols-2 gap-6 py-8 md:grid-cols-3 md:py-12">
 				<div class="flex flex-col">
-					<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
-						<Image src={show_for1} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					<div class="h-[12rem] overflow-hidden lg:h-[16rem] xl:h-[20rem]">
+						<Image
+							src={show_for1}
+							alt="photo sample"
+							format="avif"
+							class="h-full w-full object-cover"
+						/>
 					</div>
-					<p class="uppercase font-semibold text-lg lg:text-xl text-white py-2 px-2">
-						Birthdays
-					</p>
+					<p class="px-2 py-2 text-lg font-semibold text-white uppercase lg:text-xl">Birthdays</p>
 				</div>
 				<div class="flex flex-col">
-					<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
-						<Image src={show_for2} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					<div class="h-[12rem] overflow-hidden lg:h-[16rem] xl:h-[20rem]">
+						<Image
+							src={show_for2}
+							alt="photo sample"
+							format="avif"
+							class="h-full w-full object-cover"
+						/>
 					</div>
-					<p class="uppercase font-semibold text-lg lg:text-xl text-white py-2 px-2">
-						Weddings
-					</p>
+					<p class="px-2 py-2 text-lg font-semibold text-white uppercase lg:text-xl">Weddings</p>
 				</div>
 				<div class="flex flex-col">
-					<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
-						<Image src={show_for3} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					<div class="h-[12rem] overflow-hidden lg:h-[16rem] xl:h-[20rem]">
+						<Image
+							src={show_for3}
+							alt="photo sample"
+							format="avif"
+							class="h-full w-full object-cover"
+						/>
 					</div>
-					<p class="uppercase font-semibold text-lg lg:text-xl text-white py-2 px-2">
-						Baby Shower
-					</p>
+					<p class="px-2 py-2 text-lg font-semibold text-white uppercase lg:text-xl">Baby Shower</p>
 				</div>
 				<div class="flex flex-col">
-					<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
-						<Image src={show_for4} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					<div class="h-[12rem] overflow-hidden lg:h-[16rem] xl:h-[20rem]">
+						<Image
+							src={show_for4}
+							alt="photo sample"
+							format="avif"
+							class="h-full w-full object-cover"
+						/>
 					</div>
-					<p class="uppercase font-semibold text-lg lg:text-xl text-white py-2 px-2">
-						Quinceanera
-					</p>
+					<p class="px-2 py-2 text-lg font-semibold text-white uppercase lg:text-xl">Quinceanera</p>
 				</div>
 				<div class="flex flex-col">
-					<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
-						<Image src={show_for5} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					<div class="h-[12rem] overflow-hidden lg:h-[16rem] xl:h-[20rem]">
+						<Image
+							src={show_for5}
+							alt="photo sample"
+							format="avif"
+							class="h-full w-full object-cover"
+						/>
 					</div>
-					<p class="uppercase font-semibold text-lg lg:text-xl text-white py-2 px-2">
+					<p class="px-2 py-2 text-lg font-semibold text-white uppercase lg:text-xl">
 						Special Occasion
 					</p>
 				</div>
 				<div class="flex flex-col">
-					<div class="h-[12rem] lg:h-[16rem] xl:h-[20rem] overflow-hidden">
-						<Image src={show_for6} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+					<div class="h-[12rem] overflow-hidden lg:h-[16rem] xl:h-[20rem]">
+						<Image
+							src={show_for6}
+							alt="photo sample"
+							format="avif"
+							class="h-full w-full object-cover"
+						/>
 					</div>
-					<p class="uppercase font-semibold text-lg lg:text-xl text-white py-2 px-2">
+					<p class="px-2 py-2 text-lg font-semibold text-white uppercase lg:text-xl">
 						Stage Performance
 					</p>
 				</div>
@@ -207,32 +241,33 @@ import show_for6 from "../assets/show_for6.jpg";
 	</section>
 
 	<section id="reviews" class="py-8 md:py-12">
-		<div class="container flex flex-col mx-auto px-10">
-			<h2 class="flex mx-auto py-8 md:py-12 text-2xl md:text-3xl xl:text-4xl text-purpleDark uppercase font-semibold">
+		<div class="container mx-auto flex flex-col px-10">
+			<h2
+				class="text-purple-dark mx-auto flex py-8 text-2xl font-semibold uppercase md:py-12 md:text-3xl xl:text-4xl"
+			>
 				Your Reviews
 			</h2>
 			<ReviewsCarousel />
 		</div>
 	</section>
-
-
-
 </MainLayout>
 
 <script>
-const btn_show_more_pics = document.getElementById('btn-show-more-pics');
-const container_photo_more = document.getElementById('container-photo-more');
+	document.addEventListener('DOMContentLoaded', () => {
+		const btn_show_more_pics = document.getElementById('btn-show-more-pics')
+		const container_photo_more = document.getElementById('container-photo-more')
 
-const toggleShowMorePics = () => {
-		if (container_photo_more.classList.contains('hidden')){
-			btn_show_more_pics.textContent = "See less";
-		} else {
-			btn_show_more_pics.textContent = "See more";
+		if (!btn_show_more_pics || !container_photo_more) return
+
+		const toggleShowMorePics = () => {
+			if (container_photo_more.classList.contains('hidden')) {
+				btn_show_more_pics.textContent = 'See less'
+			} else {
+				btn_show_more_pics.textContent = 'See more'
+			}
+			container_photo_more.classList.toggle('hidden')
 		}
-		container_photo_more.classList.toggle('hidden');
-}
 
-btn_show_more_pics.addEventListener('click', () => {
-	toggleShowMorePics();
-})
+		btn_show_more_pics.addEventListener('click', toggleShowMorePics)
+	})
 </script>

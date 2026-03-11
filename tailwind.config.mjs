@@ -1,8 +1,4 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {},
-	},
-	plugins: [],
-}
+import { defineConfig } from 'astro/config'
+import tailwind from '@tailwindcss/vite'
+
+export default defineConfig({ vite: { plugins: [tailwind()] } })

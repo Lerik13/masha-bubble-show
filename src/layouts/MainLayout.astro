@@ -1,63 +1,69 @@
 ---
-import Nav from '../components/Nav.astro';
-import Footer from "../components/Footer.astro";
-import '../styles/global.css';
-import FaqList from '../components/FaqList.astro';
-import ContactForm from '../components/ContactForm.astro';
+import '../styles/global.css'
+import ContactForm from '../components/ContactForm.astro'
+import FaqList from '../components/FaqList.astro'
+import Footer from '../components/Footer.astro'
+import Nav from '../components/Nav.astro'
 
 interface Props {
-	title?: string;
-	description?: string;
+	title?: string
+	description?: string
 }
 
-const { 
-	title = "Maria's Bubble Show",
-	description = "Maria's Bubble Show and Polar Bear",
-} = Astro.props as Props;
+const { title = "Maria's Bubble Show", description = "Maria's Bubble Show and Polar Bear" } =
+	Astro.props as Props
 ---
 
-<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/ico" href="/logo_masha.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name= "description" content={description} />
+		<meta name="description" content={description} />
 		<title>{title}</title>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rochester&display=swap" rel="stylesheet">
+		<!-- Preconnect -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rochester&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body class="font-sans">
 		<Nav />
 		<main>
 			<slot />
 
-			<div class="flex h-[100px] w-full bg-gradient-to-b from-white to-purple-300"></div>
+			<div class="flex h-[100px] w-full bg-linear-to-b from-white to-purple-300"></div>
 
-			<section id="faq" class="bg-gradient-to-b from-purple-300 to-purpleDark pb-8 md:pb-12">
-				<div class="container flex flex-col mx-auto px-10">
-					<h2 class="flex mx-auto py-8 md:py-12 text-2xl md:text-3xl xl:text-4xl text-white uppercase font-semibold">
+			<section id="faq" class="to-purple-dark bg-linear-to-b from-purple-300 pb-8 md:pb-12">
+				<div class="container mx-auto flex flex-col px-10">
+					<h2
+						class="mx-auto flex py-8 text-2xl font-semibold text-white uppercase md:py-12 md:text-3xl xl:text-4xl"
+					>
 						FAQ
 					</h2>
 					<FaqList />
 				</div>
 			</section>
-		
-			<section id="contacts" class="bg-gradient-to-b from-purpleDark to-purple-500">
-				<div class="container flex flex-col mx-auto px-10">
-					<h2 class="flex mx-auto py-8 md:py-12 text-2xl md:text-3xl xl:text-4xl text-white uppercase font-semibold">
+
+			<section id="contacts" class="from-purple-dark bg-linear-to-b to-purple-500">
+				<div class="container mx-auto flex flex-col px-10">
+					<h2
+						class="mx-auto flex py-8 text-2xl font-semibold text-white uppercase md:py-12 md:text-3xl xl:text-4xl"
+					>
 						Contact Us
 					</h2>
 					<ContactForm />
 				</div>
 			</section>
-		
-			<div class="flex h-[100px] w-full bg-gradient-to-b from-purple-500 to-purpleLight"></div>
+
+			<div class="to-purple-light flex h-[100px] w-full bg-linear-to-b from-purple-500"></div>
 		</main>
 		<Footer />
 	</body>
 </html>
-

@@ -1,14 +1,12 @@
 ---
-import { Icon } from 'astro-icon/components';
-import Button from "../components/Button.astro";
+import { Icon } from 'astro-icon/components'
+import Button from '../components/Button.astro'
 ---
 
 <form name="contact" class="contact__form" id="form" method="POST" data-netlify="true">
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+	<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 		<div class="flex flex-col gap-y-2">
-			<label for="event_type" class="text-white">
-				Choose your event
-			</label>
+			<label for="event_type" class="text-white"> Choose your event </label>
 			<div class="select-container">
 				<select name="event_type" id="event_type" class="input-form">
 					<option value="Kids Birthday">Kids Birthday</option>
@@ -24,9 +22,7 @@ import Button from "../components/Button.astro";
 			</div>
 		</div>
 		<div class="flex flex-col gap-y-2">
-			<label for="event_place" class="text-white">
-				Where will celebration take place
-			</label>
+			<label for="event_place" class="text-white"> Where will celebration take place </label>
 			<div class="select-container">
 				<select name="event_place" id="event_place" class="input-form">
 					<option value="indoor">indoor</option>
@@ -48,7 +44,9 @@ import Button from "../components/Button.astro";
 					<option value="bubble show + WOW Bear">Bubble Show + WOW Bear</option>
 					<option value="bubble show + silver paper party">Bubble Show + Silver Paper Party</option>
 					<option value="bubble show + face painting">Bubble Show + Face Painting</option>
-					<option value="bubble show + WOW Bear + face painting">Bubble Show + WOW Bear + Face Painting</option>
+					<option value="bubble show + WOW Bear + face painting"
+						>Bubble Show + WOW Bear + Face Painting</option
+					>
 				</select>
 				<div class="icon-container">
 					<Icon name="arrow-down" class="text-2xl" />
@@ -56,9 +54,7 @@ import Button from "../components/Button.astro";
 			</div>
 		</div>
 		<div class="flex flex-col gap-y-2">
-			<label for="number_guests" class="text-white">
-				Approximate number of guests
-			</label>
+			<label for="number_guests" class="text-white"> Approximate number of guests </label>
 			<div class="select-container">
 				<select name="number_guests" id="number_guests" class="input-form">
 					<option value="up to 20">up to 20</option>
@@ -73,13 +69,11 @@ import Button from "../components/Button.astro";
 			</div>
 		</div>
 		<div class="flex flex-col gap-y-2">
-			<label for="event_date" class="text-white">
-				What is the event date 
-			</label>
+			<label for="event_date" class="text-white"> What is the event date </label>
 			<div class="input-date-container">
 				<input type="date" name="event_date" id="event_date" class="input-form" />
 				<div class="icon-container">
-					<Icon name="calendar-event" class="text-2xl z-10" />
+					<Icon name="calendar-event" class="z-10 text-2xl" />
 				</div>
 			</div>
 		</div>
@@ -90,7 +84,7 @@ import Button from "../components/Button.astro";
 			<div class="input-date-container">
 				<input type="time" name="event_time" id="event_time" class="input-form" />
 				<div class="icon-container">
-					<Icon name="time-event" class="text-2xl z-10" />
+					<Icon name="time-event" class="z-10 text-2xl" />
 				</div>
 			</div>
 		</div>
@@ -101,61 +95,60 @@ import Button from "../components/Button.astro";
 			<input type="text" name="event_address" id="event_address" class="input-form" />
 		</div>
 		<div class="flex flex-col gap-y-2">
-			<label for="name" class="text-white label-required">
-				Name
-			</label>
+			<label for="name" class="label-required text-white"> Name </label>
 			<input type="text" name="name" id="name" class="input-form" required />
 		</div>
 		<div class="flex flex-col gap-y-2">
-			<label for="phone" class="text-white">
-				Phone number
-			</label>
-			<input type="tel" name="phone" id="phone" class="input-form" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+			<label for="phone" class="text-white"> Phone number </label>
+			<input
+				type="tel"
+				name="phone"
+				id="phone"
+				class="input-form"
+				pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+			/>
 		</div>
 		<div class="flex flex-col gap-y-2">
-			<label for="email" class="text-white label-required">
-				Email address
-			</label>
+			<label for="email" class="label-required text-white"> Email address </label>
 			<input type="email" name="email" id="email" class="input-form" required />
 		</div>
 
 		<div class="flex flex-col gap-y-2 md:col-span-2">
-			<label for="add_info" class="text-white">
-				Enter additional request
-			</label>
+			<label for="add_info" class="text-white"> Enter additional request </label>
 			<textarea name="add_info" id="add_info" class="input-form textarea-form" rows="5"></textarea>
 		</div>
 	</div>
 
-	<div class="flex mx-auto mt-10 lg:mt-12 mb-6 justify-center">
+	<div class="mx-auto mt-10 mb-6 flex justify-center lg:mt-12">
 		<Button isSubmit={true} isDark={true} />
 	</div>
-
 </form>
 
 <style>
 	.label-required {
 		&::after {
-			content: "*";
-			color:#7F1D1D;
+			content: '*';
+			color: #7f1d1d;
 		}
 	}
 	.input-form {
 		color: white;
-		background-color: var(--purpleDark);
-		border: 2px solid var(--purpleLight);
+		background-color: var(--color-purple-dark);
+		border: 2px solid var(--color-purple-light);
 		border-radius: 50px;
 		font-size: medium;
 		padding: 10px 20px;
 		width: 100%;
 		min-height: 50px;
 	}
-	.select-container, .input-date-container {
+	.select-container,
+	.input-date-container {
 		position: relative;
 		display: flex;
 		justify-content: center;
 	}
-	.select-container select, .input-date-container input {
+	.select-container select,
+	.input-date-container input {
 		appearance: none;
 	}
 	.icon-container {
@@ -168,14 +161,14 @@ import Button from "../components/Button.astro";
 		align-items: center;
 		justify-content: center;
 	}
-	.input-date-container .icon-container::before  {
-		content: "";
+	.input-date-container .icon-container::before {
+		content: '';
 		position: absolute;
 		top: 15px;
 		left: 15px;
 		width: 25px;
 		height: 25px;
-		background-color: var(--purpleDark);
+		background-color: var(--color-purple-dark);
 		z-index: 1;
 	}
 

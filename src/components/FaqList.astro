@@ -4,7 +4,7 @@ import faqData from '../data/faqData';
 
 <ul class="flex flex-col gap-y-1">
 	{faqData.map(faq => (
-		<li class="border-b border-purpleDark py-4">
+		<li class="border-b border-purple-dark py-4">
 			<a id=`faq-${faq.id}` href="#" aria-label="Read the answer of this question" class="faq_question text-white">
 				{faq.question}
 			</a>
