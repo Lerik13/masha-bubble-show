@@ -2,10 +2,10 @@
 
 @import 'tailwindcss';
 
-@theme {
+:root {
 	--font-sans: 'Montserrat', sans-serif;
 	--font-hero: 'Aclonica', 'Montserrat', sans-serif;
-	--font-cursiv: 'Rochester', cursive;
+	--font-cursive: 'Rochester', cursive;
 
 	--color-purple-light: hsl(263 87% 95%);
 	--color-purple-dark: hsl(263 81% 55%);
@@ -13,15 +13,37 @@
 	--color-very-light-gray: hsl(0 0% 98%);
 }
 
-html,
-body {
-	margin: 0;
-	width: 100%;
-	height: 100%;
+@theme {
+	--font-sans: var(--font-sans);
+	--font-hero: var(--font-hero);
+	--font-cursive: var(--font-cursive);
+
+	--color-purple-light: var(--color-purple-light);
+	--color-purple-dark: var(--color-purple-dark);
+	--color-dark-gray: var(--color-dark-gray);
+	--color-very-light-gray: var(--color-very-light-gray);
 }
 
-body {
-	color: var(--color-dark-gray);
+@layer base {
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		min-height: 100%;
+	}
+
+	body {
+		font-family: var(--font-sans);
+		color: var(--color-dark-gray);
+		background: var(--color-very-light-gray);
+		line-height: 1.6;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
 }
 
 /* Hamburger Menu */
@@ -71,7 +93,8 @@ body {
 .open .hamburger-bottom {
 	transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
-/* - for animation - */
+
+/* - Animations - */
 .animate-hide {
 	opacity: 0;
 	filter: blur(5px);
@@ -89,14 +112,16 @@ body {
 	}
 }
 
+/* Buttons */
 .btn {
-	background-color: none;
+	/*background-color: none;*/
+	background: transparent;
 	color: white;
 	text-transform: uppercase;
 	border: 1px solid var(--color-purple-light);
 	border-radius: 30px;
 	padding: 12px 30px;
-	vertical-align: baseline;
+	/*vertical-align: baseline;*/
 	transition: all 300ms cubic-bezier(0, 0, 0.2, 1);
 	font-size: 1.2rem;
 }
@@ -111,10 +136,10 @@ body {
 		font-size: 1rem;
 	}
 }
-.btnDark {
+.btn-dark {
 	background-color: var(--color-purple-dark);
 }
-.btnDark:hover {
+.btn-dark:hover {
 	background-color: var(--color-purple-light);
 	color: var(--color-purple-dark);
 	border-color: var(--color-purple-dark);
